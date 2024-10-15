@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Копирка-пипирка</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: pink;
+        }
+        .container{
+            background: rgb(131,58,180);
+            background: linear-gradient(0deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+        }
+        .navigation{
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            width: 100vw;
+            background-color: rgb(255, 0, 0);
+            padding: 6px;
+            border-radius: 6px;
+            z-index: 9;
+        }
+        .navigation__item{
+            cursor: pointer;
+            border-bottom: 2px solid #000;
+            height: 100%;
+        }
+        .navigation__item__outlined{
+            border-radius: 12px;
+            border: 2px solid #000;
+            padding: 6px;
+        }
+        .popup{
+            border: 2px solid #000;
+            border-radius: 12px;
+            background-color: #fff;
+            min-width: 600px;
+            min-height: 400px;
+            max-width: 1100px;
+            max-height: 600px;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 8;
+        }
+        .popup__content{
+            border: 1px dashed #000;
+            width: 80%;
+            min-height: 400px;
+            max-height: 600px;
+            text-align: center;
+        }
+        .popup__content-title{
+            font-size: 18px;
+            font-weight: bold;
+            margin: 40px 0;
+        }
+        .popup__content-subtitle{
+            font-size: 12px;
+            font-weight: lighter;
+        }
+        .popyp-cross{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+        }
+        .popyp-cross:hover{
+            color: rgb(0, 195, 255);
+        }
+        .space{
+            height: 300vh;
+        }
+        .cards{
+            background-color: #fff;
+            position: sticky;
+            top: 80px;
+            display: flex;
+            gap: 30px;
+        }
+        .cards_element{
+            border: 1px solid #000;
+            border-radius: 12px;
+            width: 200px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <div class="navigation__item navigation__item__outlined">Меню</div>
+            <div class="navigation__item">О нас</div>
+            <div class="navigation__item">Вход</div>
+            <div class="navigation__item navigation__item__outlined">Регистрация</div>
+        </div>
+        <div class="popup">
+            <div class="popup__content">
+                <div class="popup__content-title">Добро пожаловать</div>
+                <div class="popup__content-subtitle">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut cum id fuga deserunt inventore, ipsa provident. Quos iure fuga quibusdam magnam omnis ex, recusandae odio natus, blanditiis distinctio reiciendis dolores.</div>
+            </div>
+            <div class="popyp-cross">
+                X
+            </div>
+        </div>
+        <div class="space"></div>
+        <div class="cards">
+            <div class="cards__element">
+                <div class="cards__element-title">1</div>
+            </div>
+            <div class="cards__element">
+                <div class="cards__element-title">2</div>
+            </div>
+            <div class="cards__element">
+                <div class="cards__element-title">3</div>
+            </div>
+            <div class="cards__element">
+                <div class="cards__element-title">4</div>
+            </div>
+        </div>
+        <div class="space"></div>
+    </div>
+</body>
+</html>
